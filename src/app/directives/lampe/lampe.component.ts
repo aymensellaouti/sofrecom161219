@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lampe.component.css']
 })
 export class LampeComponent implements OnInit {
-  isAllume = false;
+  isAllume = true;
   constructor() { }
 
   ngOnInit() {

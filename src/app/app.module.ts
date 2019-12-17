@@ -19,6 +19,8 @@ import { WordComponent } from './word/word.component';
 import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { DefaultImagePipe } from './default-image.pipe';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { RainbowDirective } from './directives/rainbow.directive';
     WordComponent,
     LampeComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,10 @@
-<div
+<div *ngIf="isAllume"
   appHighlight
   (click)="allumeEteint()"
   [ngClass]="{'allume' : isAllume}">
   Lampe
 </div>
-
+<button (click)="allumeEteint()">Allume </button>
 <div
   appRainbow
   appHighlight
