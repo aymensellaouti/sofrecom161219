@@ -1,0 +1,11 @@
+.allume {
+  border-color: white;
+  background-color: yellow;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  border: 1px black solid;
+  padding: 50px;
+}

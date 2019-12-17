@@ -14,6 +14,11 @@ import { ListComponent } from './cv/list/list.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { DetailComponent } from './cv/detail/detail.component';
 import { ItemComponent } from './cv/item/item.component';
+import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
+import { WordComponent } from './word/word.component';
+import { LampeComponent } from './directives/lampe/lampe.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { ItemComponent } from './cv/item/item.component';
     ListComponent,
     CvComponent,
     DetailComponent,
-    ItemComponent
+    ItemComponent,
+    NgstyleComponent,
+    WordComponent,
+    LampeComponent,
+    HighlightDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,

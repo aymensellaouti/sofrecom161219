@@ -1,0 +1,18 @@
+<div
+  appHighlight
+  (click)="allumeEteint()"
+  [ngClass]="{'allume' : isAllume}">
+  Lampe
+</div>
+
+<div
+  appRainbow
+  appHighlight
+  [in]="'blue'"
+  [out]="'pink'"
+  (click)="allumeEteint()"
+  [ngClass]="{'allume' : isAllume}">
+  Lampe
+</div>
+
+<input type="text" appRainbow>
