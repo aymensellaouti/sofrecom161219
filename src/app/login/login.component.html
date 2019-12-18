@@ -1,0 +1,28 @@
+<form #formulaire="ngForm">
+  Email
+  <input
+    type="text"
+    required
+    email
+    ngModel
+    name="email"
+    class="form-control"
+    #email = "ngModel"
+  >
+  <div class="alert alert-danger"
+    *ngIf="email.invalid && email.touched"
+  >
+    Veuillez saisir un email valid
+  </div>
+  Password <input
+  type="password"
+  required
+  minlength="4"
+  ngModel
+  name="password"
+  class="form-control"
+>
+</form>
+<button [disabled]="formulaire.invalid" class="btn btn-primary" (click)="login(formulaire)">
+  Login
+</button>

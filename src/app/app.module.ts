@@ -22,6 +22,16 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './default-image.pipe';
 import { TodoComponent } from './todo/todo.component';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
+import { HeaderComponent } from './header/header.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
+import { FrontComponent } from './front/front.component';
+import { BackComponent } from './back/back.component';
+import { AdminitrationComponent } from './adminitration/adminitration.component';
+import { NF404Component } from './nf404/nf404.component';
+import { LoginComponent } from './login/login.component';
+import { ObservableComponent } from './observable/observable.component';
+import { AsyncMePipe } from './async-me.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +53,17 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
     RainbowDirective,
     DefaultImagePipe,
     TodoComponent,
-    EmbaucheComponent
+    EmbaucheComponent,
+    HeaderComponent,
+    RouterSimulatorComponent,
+    DetailPersonneComponent,
+    FrontComponent,
+    BackComponent,
+    AdminitrationComponent,
+    NF404Component,
+    LoginComponent,
+    ObservableComponent,
+    AsyncMePipe
   ],
   imports: [
     BrowserModule,
