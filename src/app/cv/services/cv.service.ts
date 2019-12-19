@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Personne} from '../Model/personne';
 import {Observable, Subject} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
 const API_LINK = 'https://immense-citadel-91115.herokuapp.com/api/personnes';
 
@@ -39,6 +39,10 @@ export class CvService {
     this.selectedPersonne.next(personne);
   }
   deletePersonneById(id): Observable<number> {
-    return this.http.delete<number>(API_LINK + `/${id}`);
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', token);
+ //   const params = new HttpParams().set('access_token', token);
+    return this.http.delete<number>(API_LINK + `/${id}`, {headers});
+ //   return this.http.delete<number>(API_LINK + `/${id}`, {params});
   }
 }

@@ -33,6 +33,7 @@ import { LoginComponent } from './login/login.component';
 import { ObservableComponent } from './observable/observable.component';
 import { HttpComponent } from './http/http.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import {HttpClientModule} from '@angular/common/http';
     NF404Component,
     LoginComponent,
     ObservableComponent,
-    HttpComponent
+    HttpComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,

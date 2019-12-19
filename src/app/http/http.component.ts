@@ -13,7 +13,7 @@ export class HttpComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.get<any>('http://jsonplaceholder.typicode.com/todoss').subscribe(
+    this.http.get<any>('http://jsonplaceholder.typicode.com/todos').subscribe(
       (data) => console.log(data),
       (erreur) => console.log(erreur)
     );

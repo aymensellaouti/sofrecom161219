@@ -10,6 +10,8 @@ import {AdminitrationComponent} from './adminitration/adminitration.component';
 import {ColorComponent} from './color/color.component';
 import {NF404Component} from './nf404/nf404.component';
 import {LoginComponent} from './login/login.component';
+import {AddPersonneComponent} from './cv/add-personne/add-personne.component';
+import {LoginGuard} from './guards/login.guard';
 
 
 const routes: Routes = [
@@ -18,6 +20,11 @@ const routes: Routes = [
       {
         path: 'cv', children: [
           {path: '', component: CvComponent},
+          {
+            path: 'add',
+            component: AddPersonneComponent,
+            canActivate : [LoginGuard]
+          },
           {path: ':id', component: DetailPersonneComponent},
         ]
       },
