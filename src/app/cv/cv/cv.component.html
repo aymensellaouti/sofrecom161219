@@ -1,9 +1,11 @@
+Nombre de click sur les items : {{nbSelect}}
 <div class="row">
   <div class="col-md-6">
     <app-list (forwardPersonne)="selectForwawrdedPersonne($event)"></app-list>
   </div>
   <div class="col-md-6">
-    <app-detail [personne]="selectedPersonne"></app-detail>
+<!--    [personne]="selectedPersonne" in case when you will use @Input and @Output-->
+    <app-detail></app-detail>
   </div>
 </div>
 <div class="row">

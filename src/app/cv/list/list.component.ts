@@ -15,7 +15,13 @@ export class ListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => this.personnes = personnes,
+      (error) => {
+        this.personnes = this.cvService.getFakePersonnes();
+        alert('Pbm with API connexion, dta are Fake');
+      }
+    );
   }
 
   onSelectPersonne(personne: Personne) {

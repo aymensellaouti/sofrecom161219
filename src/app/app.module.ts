@@ -31,7 +31,8 @@ import { AdminitrationComponent } from './adminitration/adminitration.component'
 import { NF404Component } from './nf404/nf404.component';
 import { LoginComponent } from './login/login.component';
 import { ObservableComponent } from './observable/observable.component';
-import { AsyncMePipe } from './async-me.pipe';
+import { HttpComponent } from './http/http.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -63,12 +64,13 @@ import { AsyncMePipe } from './async-me.pipe';
     NF404Component,
     LoginComponent,
     ObservableComponent,
-    AsyncMePipe
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

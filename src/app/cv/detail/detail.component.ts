@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Personne} from '../Model/personne';
 import {EmbaucheService} from '../services/embauche.service';
+import {CvService} from '../services/cv.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,11 +9,15 @@ import {EmbaucheService} from '../services/embauche.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  @Input() personne: Personne;
+  // @Input() personne: Personne;
   constructor(
-    private embaucheService: EmbaucheService
+    private embaucheService: EmbaucheService,
+    private cvService: CvService
   ) { }
   ngOnInit() {
+    this.cvService.getSelectedPersonne().subscribe(
+      (personne) => this.personne = personne
+    );
   }
   embaucher() {
     this.embaucheService.embaucher(this.personne);
