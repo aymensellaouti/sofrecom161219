@@ -34,6 +34,7 @@ import { ObservableComponent } from './observable/observable.component';
 import { HttpComponent } from './http/http.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import {AuthentificationInterceptorProvider} from './interceptors/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,7 @@ import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthentificationInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

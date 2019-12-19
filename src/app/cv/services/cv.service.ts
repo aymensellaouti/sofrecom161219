@@ -40,9 +40,10 @@ export class CvService {
   }
   deletePersonneById(id): Observable<number> {
     const token = localStorage.getItem('token');
-    const headers = new HttpHeaders().set('Authorization', token);
+    // const headers = new HttpHeaders().set('Authorization', token);
  //   const params = new HttpParams().set('access_token', token);
-    return this.http.delete<number>(API_LINK + `/${id}`, {headers});
+ //    return this.http.delete<number>(API_LINK + `/${id}`, {headers});
+    return this.http.delete<number>(API_LINK + `/${id}`);
  //   return this.http.delete<number>(API_LINK + `/${id}`, {params});
   }
 }
