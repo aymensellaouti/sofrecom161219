@@ -9,7 +9,7 @@ import {CvService} from '../services/cv.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  // @Input() personne: Personne;
+  @Input() personne: Personne;
   constructor(
     private embaucheService: EmbaucheService,
     private cvService: CvService

@@ -29,10 +29,16 @@ export class CvService {
   getSelectedPersonne() {
     return this.selectedPersonne;
   }
-  findPersonneById(id): Personne {
+  staticFindPersonneById(id): Personne {
     return this.personnes.find( (personne) => personne.id === +id);
+  }
+  findPersonneById(id): Observable<Personne> {
+    return this.http.get<Personne>(API_LINK + `/${id}`);
   }
   selectPersonne(personne: Personne) {
     this.selectedPersonne.next(personne);
+  }
+  deletePersonneById(id): Observable<number> {
+    return this.http.delete<number>(API_LINK + `/${id}`);
   }
 }
